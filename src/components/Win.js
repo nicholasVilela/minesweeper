@@ -4,7 +4,7 @@ export class Win extends Component {
     render() {
         return (
             <div>
-                <h1>You Win!</h1>
+                <h1 className="win-lose">You Win!</h1>
             </div>
         );
     }

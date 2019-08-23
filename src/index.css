@@ -11,16 +11,26 @@ body {
   min-height: 100%;
 }
 
+.title {
+  text-align: center;
+}
+
 .cell {
   position: relative;
   background-color: darkslategrey;
   height: 2rem;
   width: 2rem;
+  color: white;
+  border: solid black;
+  text-align: center;
+}
+
+.win-lose {
+  text-align: center;
 }
 
 .cell-table {
   display: flex;
   position: relative;
-  left: 30rem;
-  top: 2rem;
+  justify-content: center;
 }
