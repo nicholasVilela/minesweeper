@@ -12,7 +12,6 @@ class Board extends Component {
         id: null,
         win: false,
         lose: false,
-        difficulty: null
     }
 
     check = (x, y) => {
@@ -23,7 +22,6 @@ class Board extends Component {
             'col' : y
         })
         .then(res => {
-            // console.log(res.data)
             this.setState({
                 board: res.data.board,
                 currState: res.data.state,
@@ -52,7 +50,6 @@ class Board extends Component {
             col : y
         })
         .then(res => {
-            // console.log(res.data)
             this.setState({
                 board: res.data.board,
                 mines: res.data.mines
@@ -64,15 +61,12 @@ class Board extends Component {
         await Axios.post('http://minesweeper-api.herokuapp.com/games', {
             difficulty : 0
         }).then(res => {
-            // const diff = window.prompt('Enter difficulty, 0, 1, 2')
             this.setState({
                 board: res.data.board,
                 currState: res.data.state,
                 mines: res.data.mines,
                 id: res.data.id,
-                // difficulty: diff
             })
-            // console.log(this.state)
         })  
              
     }
@@ -110,8 +104,6 @@ class Board extends Component {
 
                 {this.state.win && !this.state.lose && <Win />}
                 {this.state.lose && !this.state.win && <Lose />}
-                {/* <Win win={this.state.win}/> */}
-                {/* <Lose lose={this.state.lose}/> */}
             </> 
             
         );
