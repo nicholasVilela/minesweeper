@@ -62,7 +62,7 @@ class Board extends Component {
 
     newGame = async () => {
         await Axios.post('http://minesweeper-api.herokuapp.com/games', {
-            difficulty : 2
+            difficulty : 0
         }).then(res => {
             // const diff = window.prompt('Enter difficulty, 0, 1, 2')
             this.setState({
